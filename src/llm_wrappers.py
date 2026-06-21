@@ -5,7 +5,7 @@ llm_wrappers.py
 Two DeepEval base-class implementations:
 
 1. LiteLLMDeepEvalLLM
-   Replaces app1.py's GroqDeepEvalLLM. Same dual-mode behaviour (free-text
+   Replaces 04-06-2026_deepEvals_Golden.ipynb's GroqDeepEvalLLM. Same dual-mode behaviour (free-text
    generation AND Pydantic-schema-validated JSON generation for DeepEval's
    internal filtration/evolution/styling machinery), but routes every call
    through LiteLLM's unified completion()/acompletion() interface instead of
@@ -14,11 +14,11 @@ Two DeepEval base-class implementations:
    never changes.
 
 2. LocalEmbeddingModel
-   Identical in behaviour to app1.py's version. Embeddings are ONLY used by
+   Identical in behaviour to 04-06-2026_deepEvals_Golden.ipynb's version. Embeddings are ONLY used by
    DeepEval internally for document chunking and context-group similarity
    inside generate_goldens_from_docs(); kept 100% local via
    sentence-transformers so no OpenAI key is ever required (this was the
-   original bug app1.py worked around, and that fix is preserved verbatim).
+   original bug 04-06-2026_deepEvals_Golden.ipynb.py worked around, and that fix is preserved verbatim).
 ================================================================================
 """
 

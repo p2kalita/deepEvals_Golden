@@ -7,13 +7,13 @@ exact model-string format LiteLLM expects, so swapping providers is a
 config-only change everywhere else in the codebase.
 
 LiteLLM routes by string prefix, e.g.:
-    "gemini/gemini-2.5-pro-preview-03-25"   -> Google Gemini API
+    "gemini/gemini-2.5-flash"   -> Google Gemini API
     "gpt-4o"                                -> OpenAI (no prefix needed)
     "claude-sonnet-4-6"                     -> Anthropic (no prefix needed,
                                                 but we add "anthropic/" to be
                                                 explicit and avoid ambiguity)
     "groq/llama-3.3-70b-versatile"          -> Groq
-    "ollama/gemma2:latest"                  -> local Ollama server
+    "ollama/gemma4:latest"                  -> local Ollama server
 
 Only this module knows about that mapping. Every other module just asks for
 "the LiteLLM model string" and "the parameters" and does not care which
@@ -83,7 +83,7 @@ class ModelConfig:
             )
         if not prefix:
             return self.model
-        # Ollama already encodes the tag (e.g. "gemma2:latest") in `model`.
+        # Ollama already encodes the tag (e.g. "gemma4:latest") in `model`.
         return f"{prefix}/{self.model}"
 
 

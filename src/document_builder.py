@@ -2,9 +2,6 @@
 ================================================================================
 document_builder.py
 ================================================================================
-Replaces app1.py's three hardcoded sample .txt files (AI/Cloud/Cybersecurity)
-with one auto-generated .txt document per row of tickets.csv.
-
 No hardcoded sample content lives here -- every document is derived entirely
 from the CSV at runtime, so the same code works unchanged for any support-
 ticket CSV with Body / Department / Priority / Tags columns, no matter how

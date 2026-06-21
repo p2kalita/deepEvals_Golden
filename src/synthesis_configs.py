@@ -2,7 +2,7 @@
 ================================================================================
 synthesis_configs.py
 ================================================================================
-Every DeepEval Synthesizer configuration object from app1.py, preserved
+Every DeepEval Synthesizer configuration object from 04-06-2026_deepEvals_Golden.ipynb, preserved
 exactly (same thresholds, same evolution weights, same styling text), just
 reorganised into factory functions so they're reusable across every
 provider/model and every one of the 3x4 complexity/style combinations
@@ -17,7 +17,7 @@ Nothing about the actual config values has been simplified or reduced:
   - FiltrationConfig keeps the same quality_threshold and retry count.
   - ContextConstructionConfig keeps the same chunking/context parameters,
     and the embedder is still attached here (not on Synthesizer), which is
-    the load-bearing fix from app1.py for avoiding the OpenAI-key error.
+    the load-bearing fix from 04-06-2026_deepEvals_Golden.ipynb for avoiding the OpenAI-key error.
 ================================================================================
 """
 
@@ -111,7 +111,7 @@ def build_evolution_config(tier: ComplexityTier) -> EvolutionConfig:
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Styling configs -- four question personas, adapted to the support-ticket
-# domain (app1.py's originals were AI/Cloud/Cybersecurity-flavoured; the
+# domain (04-06-2026_deepEvals_Golden.ipynb's originals were AI/Cloud/Cybersecurity-flavoured; the
 # task/scenario text below is the same structure applied to ticket triage,
 # since that's what document_builder.py now generates context from).
 # ─────────────────────────────────────────────────────────────────────────────
