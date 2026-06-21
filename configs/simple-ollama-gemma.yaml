@@ -1,0 +1,16 @@
+name: Ollama Gemma2 Local - Simple
+description: No system prompt, no few-shot. Runs fully locally via Ollama.
+version: 1.0.0
+components:
+  api: ollama
+  model: gemma4:latest
+parameters:
+  batch_processing:
+    enabled: false  # local models are usually rate-limited by hardware, not the API
+    batch_size: 2
+  temperature: 0.7
+  system_message: ''
+  api_base: http://localhost:11434
+training_examples: []
+created_at: '2026-06-21'
+last_modified: '2026-06-21'
